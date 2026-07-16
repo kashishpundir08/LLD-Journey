@@ -48,32 +48,43 @@ public class Main {
 //        s.describe();
 
         // mini library system
-        Book b1 = new Book("Krishna", "Bhagvad geeta");
-        Book b2 = new Book("Valmiki", "Ramayan");
-        Library l = new Library();
-        Member m1 = new Member("Shri", 1);
-        Member m2 = new Member("Madhav", 2);
-
-
-        // adding book
-        l.addBooks(b1);
-        l.addBooks(b2);
-        //checking book b1 available or not --- true
-        System.out.println(l.isAvailable(b1.getTitle()));
-        // issue b1 to m1 --- Book is issue to Shri
-        l.issueBook(b1.getTitle(), m1);
-        // checking availability of b1 --- false
-        System.out.println(l.isAvailable(b1.getTitle()));
-        // issue again b1 to m2 but now  --- book is not available
-        l.issueBook(b1.getTitle(), m2);
-        // returning b1 -- Book return successfully
-        l.returnBook(b1.getTitle());
-        // checking availability of b1 again -- true
-        System.out.println(l.isAvailable(b1.getTitle()));
-
-        // printing all book Krishna written Bhagvad geet, Valmiki written Ramayan
-        for(Book book : l.getAllBooks()){
-            System.out.println(book.getAuthor() + " written " + book.getTitle());
-        }
+//        Book b1 = new Book("Krishna", "Bhagvad gita");
+//        Book b2 = new Book("Valmiki", "Ramayan");
+//        Library l = new Library();
+//        Member m1 = new Member("Shri", 1);
+//        Member m2 = new Member("Madhav", 2);
+//
+//
+//        // adding book
+//        l.addBooks(b1);
+//        l.addBooks(b2);
+//        //checking book b1 available or not --- true
+//        System.out.println(l.isAvailable(b1.getTitle()));
+//        // issue b1 to m1 --- Book is issue to Shri
+//        l.issueBook(b1.getTitle(), m1);
+//        // checking availability of b1 --- false
+//        System.out.println(l.isAvailable(b1.getTitle()));
+//        // issue again b1 to m2 but now  --- book is not available
+//        l.issueBook(b1.getTitle(), m2);
+//        // returning b1 -- Book return successfully
+//        l.returnBook(b1.getTitle());
+//        // checking availability of b1 again -- true
+//        System.out.println(l.isAvailable(b1.getTitle()));
+//        // changing m1
+//        m1.setMember("Prabhu");
+//        l.issueBook(b2.getTitle(), m1);
+//        // printing all book Krishna written Bhagvad gita, Valmiki written Ramayan
+//
+//        for(Book book : l.getAllBooks()){
+//            System.out.println(book.getAuthor() + " written " + book.getTitle());
+//        }
+//        //Getting by title
+//        for(Book book : l.bookByTitle("Bhagvad gita")){
+//            System.out.println(book.getAuthor() + " written " + book.getTitle());
+//        }
+//        // If book is not available
+//        for(Book book : l.bookByTitle("abc")){
+//            System.out.println(book.getAuthor() + " written " + book.getTitle());
+//        }
     }
 }

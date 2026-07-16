@@ -9,14 +9,15 @@ public class Library{
     public List<Book> getAllBooks(){
         return books;
     }
-    public List<Book> bookById(String title){
+    public List<Book> bookByTitle(String title){
         List<Book> res = new ArrayList<>();
         for(Book book : books ){
             if(book.getTitle().equals(title)){
                 res.add(book);
-                break;
+                return res;
             }
         }
+        System.out.println("This book is not available");
         return res;
     }
 

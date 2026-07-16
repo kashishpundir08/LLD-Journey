@@ -112,14 +112,23 @@ Inheritance = IS A relationship. SavingsAccount IS A BankAccount.
 
 ******************************************************PHASE 2 ******************************************************************
 
+**Q.1 What is Single Responsibility Principle in one line?**
+In this one class should have only reason to change.
 
+**Q.2 What was wrong with the old Library class?**
+in old library we wre handling all operation, add book, get book, return boo, issued book.
 
+**Q.3 How did splitting into BookRepository and BookIssueService fix it?**
+It split operation in two parts we are handling add book, get book in book repo and checkin book availability in bookIssue service we implement in this all book issue methods.
 
+**Q.4 What does "one reason to change" mean in your own words?**
+It means one class handle only one service like issue book now all method related to issue book only implemented 
+in this class like availability of book only then book can be issue.
 
-
-
-
-
+***************NOTE*****************
+In Spring Boot, your UserService should only handle user business logic. 
+Your UserRepository should only handle DB queries. Your UserController should only handle HTTP requests. 
+Three classes, three jobs, three reasons to change separately.
 
 
 
