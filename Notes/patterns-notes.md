@@ -5,7 +5,7 @@ LLD-Journey/
 │   ├── 03-Inheritance/
 │   ├── 04-Polymorphism/
 │   └── 05-Abstraction/
-├── Phase2-SOLID/
+├── Phase2-SOLID/QA
 │   ├── S-SingleResponsibility/
 │   ├── O-OpenClosed/
 │   ├── L-LiskovSubstitution/
@@ -27,7 +27,7 @@ LLD-Journey/
 
 *************************************************PHASE 1 **********************************************************
 **Q.1 What is a class?**
-A class is this blueprint for the objects 
+A class is the blueprint for the objects 
 It doesn't take physical memory because it is a virtual implementation.
 
 **Q.2 What is an object?**
@@ -44,24 +44,24 @@ Class name and constructor name should be same
 
 Day 2
 **Q.5 What is encapsulation in one line?**
-If fields are public, anyone can set invalid values like balance = -99999 and you have no way to stop it. 
+If fields are public, anyone can set invalid values like balance = -99999, and you have no way to stop it. 
 Private fields + methods give you control over what values are allowed.
 
-**Q.6 What does private do?**
+**Q.6 What does private keyword do?**
 private keyword restricted the access of that member outside that class.
 
 **Q.7 What is a getter and why do we need it?**
-In encapsulation we restricted access of variable outside that class to access we make public getter setter
+In encapsulation, we restricted access of variable outside that class to access we make public getter setter
 
 **Q.8 Why can't you just keep fields public?**
 not everyone can access the data.
 
 **Q.9 What is inheritance in one line?**
-Inheritance is used to inherit the property of parent class into the child class no need to re write or declare 
+Inheritance is used to inherit the property of parent class into the child class no need to re-write or declare 
 whole variable again
 
 **Q.10 What does extends do?**
-Extends is a keyword that is used to inherit the parent class into child class
+Extends keyword is a keyword that is used to inherit the parent class into child class
 
 **Q.11 What does super() do and why is it needed?**
 super() is used to call the parent class constructor no need to define again
@@ -84,7 +84,7 @@ Here run time polymorphism happen as we make object of parent class but on calli
 because savingsAccount override the method showBalance of BankAccount
 
 **Q.17 What is abstraction in one line?**
-It hide the implementation and show the functionality. Like area how it is working it hides that but area what is providing 
+It hides the implementation and show the functionality. Like area how it is working it hides that but area what is providing 
 that shows
 
 **Q.18 Difference between abstract class and interface?**
@@ -100,11 +100,11 @@ implements is used to implement the interface and extend is used to inherit the 
 
 **What is the difference between a class that USES another class vs a class that EXTENDS another class? 
 Give an example from today.**
-Extends is used to inherit the class we can use override functionality but if a class not use extends
+Extends keyword is used to inherit the class we can use override functionality but if a class not use extends
 it still can use its member.
 extends means "IS A". Library is not a Book. Library is not a Member. Library just USES books and members.
 That is called composition — one class uses objects of another class.
-Also you don't need to extend Member to use it in a method. You can just take a Member object as a parameter
+Also, you don't need to extend Member to use it in a method. You can just take a Member object as a parameter
 directly.
 Composition = HAS A relationship. Library HAS A list of Books.
 Inheritance = IS A relationship. SavingsAccount IS A BankAccount.
@@ -125,7 +125,7 @@ It split operation in two parts we are handling add book, get book in book repo 
 It means one class handle only one service like issue book now all method related to issue book only implemented 
 in this class like availability of book only then book can be issue.
 
-***************NOTE*****************
+***************NOTE***************
 In Spring Boot, your UserService should only handle user business logic. 
 Your UserRepository should only handle DB queries. Your UserController should only handle HTTP requests. 
 Three classes, three jobs, three reasons to change separately.

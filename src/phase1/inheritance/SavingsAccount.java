@@ -12,6 +12,7 @@ public class SavingsAccount extends BankAccount { // inheritance
        super(owner, balance); // super call  that call exactly parent constructor. it should be the first line
        this.interestRate = interestRate;
    }
+
    public void addInterest(){
        deposit(getBalance() * interestRate /100);  // as balance is private so we are using getBalance
    }
