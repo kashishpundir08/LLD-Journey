@@ -130,11 +130,19 @@ In Spring Boot, your UserService should only handle user business logic.
 Your UserRepository should only handle DB queries. Your UserController should only handle HTTP requests. 
 Three classes, three jobs, three reasons to change separately.
 
+**Q.5 What is Open/Closed Principle in one line?**
+ A class which is open for extension but closed for modification
 
+**Q.6 What was the problem with if-else approach for discounts?**
+Have to make multiple if else condition and in future if another discount method need then have to do modification on that.
 
+**Q.7 How did DiscountStrategy interface fix it?**
+DiscountStrategy interface made Order independent of which discount type is used. 
+Order just calls apply() without knowing the implementation. 
+So any new discount class that implements DiscountStrategy automatically works with Order without changing it.
 
-
-
+**Q.8 What did you have to change in Order when you added BuyOneGetOneDiscount?**
+Nothing, no need to change for another implementations 
 
 
 
