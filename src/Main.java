@@ -14,7 +14,7 @@ public class Main {
 //        BankAccount ac = new BankAccount("Krishna", 1200);
 //        ac.deposit(2000);
 //        ac.showBalance();
-//    //  ac.balance =  -999999; // anyone can set value if balace have public access so we will use encapsulation by making them private and public getter and setter method to access them.
+//    //  ac.balance =  -999999; // anyone can set value if balance have public access so we will use encapsulation by making them private and public getter and setter method to access them.
 //
 //        System.out.println(ac.getBalance());
 //        System.out.println(ac.getOwner());
@@ -27,7 +27,7 @@ public class Main {
 //        SavingsAccount sa  = new SavingsAccount("Madhav", 10000, 20);
 //        sa.addInterest();
 //        sa.showBalance();
-//
+
 //        BankAccount ba = new SavingsAccount("Shri", 500000, 10);
 //         ba.showBalance();
 //        ba.deposit(9000, "Krishna set this");

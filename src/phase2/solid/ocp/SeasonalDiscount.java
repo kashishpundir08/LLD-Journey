@@ -8,6 +8,6 @@ public class SeasonalDiscount implements DiscountStrategy {
     }
 
     public double apply(double price){
-        return price - ( price * multiplier / 100);
+        return price * multiplier;
     }
 }

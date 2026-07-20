@@ -42,7 +42,6 @@ A constructor is used to initialize the objects.
 It has no return type.
 Class name and constructor name should be same
 
-Day 2
 **Q.5 What is encapsulation in one line?**
 If fields are public, anyone can set invalid values like balance = -99999, and you have no way to stop it. 
 Private fields + methods give you control over what values are allowed.
@@ -109,8 +108,8 @@ directly.
 Composition = HAS A relationship. Library HAS A list of Books.
 Inheritance = IS A relationship. SavingsAccount IS A BankAccount.
 
-
-******************************************************PHASE 2 ******************************************************************
+***************************************************PHASE 2, SOLID***************************************************
+*************Single Responsibility Principle(SRP)*************
 
 **Q.1 What is Single Responsibility Principle in one line?**
 In this one class should have only reason to change.
@@ -125,10 +124,12 @@ It split operation in two parts we are handling add book, get book in book repo 
 It means one class handle only one service like issue book now all method related to issue book only implemented 
 in this class like availability of book only then book can be issue.
 
-***************NOTE***************
+*************NOTE***********
 In Spring Boot, your UserService should only handle user business logic. 
 Your UserRepository should only handle DB queries. Your UserController should only handle HTTP requests. 
 Three classes, three jobs, three reasons to change separately.
+
+**************Open/closed Principle(OCP)**************
 
 **Q.5 What is Open/Closed Principle in one line?**
  A class which is open for extension but closed for modification
@@ -144,6 +145,21 @@ So any new discount class that implements DiscountStrategy automatically works w
 **Q.8 What did you have to change in Order when you added BuyOneGetOneDiscount?**
 Nothing, no need to change for another implementations 
 
+************Liskov Substitution Principle (LSP)************]
+
+**Q.9 What is Liskov Substitution Principle in one line?**
+Child class should be replaceable for the parent class without breaking the program's behavior.
+
+**Q.10 What was the violation with Square extending Rectangle?**
+If we were changing height then it was changing width also and vice versa. So if we were calling sq as an rect but
+it was den that behavior.
+
+**Q.11 What was the fix?**
+We made a interface so without extending class , classes implements that interface and behave accordingly.
+
+**Q.12 One line to remember when inheritance is wrong to use?**
+When one class doesn't need anything from another class or both the classes have different behavior.
+ 
 
 
 

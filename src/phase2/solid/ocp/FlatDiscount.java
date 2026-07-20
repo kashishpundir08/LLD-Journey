@@ -6,6 +6,7 @@ public class FlatDiscount implements DiscountStrategy{
     public FlatDiscount(double amount){
         this.amount = amount;
     }
+
     @Override
     public double apply(double price){
         return price - amount;
