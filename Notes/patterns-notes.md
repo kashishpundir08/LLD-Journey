@@ -124,7 +124,7 @@ It split operation in two parts we are handling add book, get book in book repo 
 It means one class handle only one service like issue book now all method related to issue book only implemented 
 in this class like availability of book only then book can be issue.
 
-*************NOTE***********
+***********NOTE***********
 In Spring Boot, your UserService should only handle user business logic. 
 Your UserRepository should only handle DB queries. Your UserController should only handle HTTP requests. 
 Three classes, three jobs, three reasons to change separately.
@@ -145,13 +145,13 @@ So any new discount class that implements DiscountStrategy automatically works w
 **Q.8 What did you have to change in Order when you added BuyOneGetOneDiscount?**
 Nothing, no need to change for another implementations 
 
-************Liskov Substitution Principle (LSP)************]
+************Liskov Substitution Principle (LSP)************
 
 **Q.9 What is Liskov Substitution Principle in one line?**
 Child class should be replaceable for the parent class without breaking the program's behavior.
 
 **Q.10 What was the violation with Square extending Rectangle?**
-If we were changing height then it was changing width also and vice versa. So if we were calling sq as an rect but
+If we were changing height then it was changing width also and vice versa. So if we were calling sq as a rect, but
 it was den that behavior.
 
 **Q.11 What was the fix?**
@@ -159,7 +159,30 @@ We made a interface so without extending class , classes implements that interfa
 
 **Q.12 One line to remember when inheritance is wrong to use?**
 When one class doesn't need anything from another class or both the classes have different behavior.
- 
+
+
+********************Interface Segregation Principle(ISP)********************
+**Q.13 What is Interface Segregation Principle in one line?**
+In this we made multiple interfaces rather then 1 sp that a class can implement only needed interface.
+
+**Q.14 What was wrong with the fat Printer interface?**
+There were 3 methods in that but after making print class that only need only print print method but we have to implement
+other methods also like scan and fax.
+
+**Q.15 How did splitting into Printable, Scannable, Faxable fix it?**
+Printable have print method scannable have scan method and faxable have fax method so in future after creating class
+if we need only one class then have to just implement that interface. so what method we will need we will just implement that interface.
+
+**Q.16 Real world example from Spring Boot where ISP applies?**
+In Spring Boot you have JpaRepository, CrudRepository, PagingAndSortingRepository. 
+Each has different methods. You pick only the one that has what you need. That is ISP in action.
+
+
+******************Dependency Injection Principle(DIP)******************
+
+
+
+
 
 
 
