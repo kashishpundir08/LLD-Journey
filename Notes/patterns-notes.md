@@ -162,6 +162,7 @@ When one class doesn't need anything from another class or both the classes have
 
 
 ********************Interface Segregation Principle(ISP)********************
+
 **Q.13 What is Interface Segregation Principle in one line?**
 In this we made multiple interfaces rather then 1 sp that a class can implement only needed interface.
 
@@ -180,8 +181,20 @@ Each has different methods. You pick only the one that has what you need. That i
 
 ******************Dependency Injection Principle(DIP)******************
 
+**Q.17 What is Dependency Inversion Principle in one line?**
+In this we don't have to directly depend on the specific implementation rather it depends on interface.
 
+**Q.18 What was wrong with directly using EmailSender inside NotificationService?**
+It will send only email msg and for sms msg either we have to change it or we have to implement another service
 
+**Q.19 How did MessageSender interface fix it?**
+As interface implement in both(sms,email) then we don't have to make multiple classes at the run time we can directly
+call which method we want to call sms or email.
+
+**Q.20 Where have you already used DIP without knowing it?**
+In your spiritual-habit-tracker Spring Boot project, your Service classes don't directly create Repository objects. 
+Spring injects them automatically via @Autowired.Your Service only depends on the Repository interface,
+not the concrete implementation. That is DIP — Spring is doing the dependency injection for you.
 
 
 
