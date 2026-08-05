@@ -7,10 +7,12 @@ public class Book {
 
     public Book(){
     }
+
     public Book(String author, String title){
         this.author = author;
         this.title = title;
     }
+
     public String getAuthor(){
         return  this.author;
     }

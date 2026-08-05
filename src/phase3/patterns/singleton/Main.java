@@ -9,5 +9,6 @@ public class Main {
     System.out.println(c1.getUrl());
     System.out.println(c2.getUrl());
     System.out.println(c1==c4);
+    System.out.println(c3==c4);
     }
 }

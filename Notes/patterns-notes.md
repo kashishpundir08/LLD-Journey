@@ -155,7 +155,7 @@ If we were changing height then it was changing width also and vice versa. So if
 it was den that behavior.
 
 **Q.11 What was the fix?**
-We made a interface so without extending class , classes implements that interface and behave accordingly.
+We made an interface so without extending class , classes implements that interface and behave accordingly.
 
 **Q.12 One line to remember when inheritance is wrong to use?**
 When one class doesn't need anything from another class or both the classes have different behavior.
@@ -164,7 +164,7 @@ When one class doesn't need anything from another class or both the classes have
 ********************Interface Segregation Principle(ISP)********************
 
 **Q.13 What is Interface Segregation Principle in one line?**
-In this we made multiple interfaces rather then 1 sp that a class can implement only needed interface.
+In this we made multiple interfaces rather than 1 sp that a class can implement only needed interface.
 
 **Q.14 What was wrong with the fat Printer interface?**
 There were 3 methods in that but after making print class that only need only print print method but we have to implement
@@ -196,13 +196,27 @@ In your spiritual-habit-tracker Spring Boot project, your Service classes don't 
 Spring injects them automatically via @Autowired.Your Service only depends on the Repository interface,
 not the concrete implementation. That is DIP — Spring is doing the dependency injection for you.
 
+***************************************************PHASE 3 Patterns***************************************************
+**********************Singleton**********************
 
+**Q.1 What is Singleton pattern in one line?**
+Only one instance of a class exists in the entire program, shared everywhere.
 
+**Q.2 Why is the constructor private?**
+If the constructor were public, anyone could write new DatabaseConnection() and create a new object. Private constructor blocks that. The only way to get the object is through getInstance() — which controls that only one is ever created.
 
+**Q.3 Why is instance field static?**
+Because static belongs to the class, not to any object. Since you can never create an object first (constructor is private), you need a way to hold the instance at the class level. Static allows that.
 
+**Q.4 3 real world use cases for Singleton?**
+Database connection — one connection shared across the whole app
+Logger — one logger writing to the same file everywhere
+Config/properties reader — read the config file once, share the values ever
 
-
-
-
+*************************Factory************************
+**Q.5 What is Factory pattern in one line?**
+**Q.6 What problem does it solve?**
+**Q.7 Why is getShape() static?**
+**Q.8 What is the risk of returning null for unknown types?**
 
 

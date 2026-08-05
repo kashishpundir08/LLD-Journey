@@ -8,3 +8,4 @@ package phase2.solid.isp;
 //    //As there are three methods we have to implement all the methods in all class but if made seperate interface for each
 //    // method then which classes need have to add only that method.
 //}
+
