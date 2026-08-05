@@ -215,8 +215,21 @@ Config/properties reader — read the config file once, share the values ever
 
 *************************Factory************************
 **Q.5 What is Factory pattern in one line?**
+A separate class handles object creation — the caller just asks for an object by type and gets it back without knowing which 
+class was instantiated.
+
 **Q.6 What problem does it solve?**
+Without factory, every place in your code that needs a Shape has to write new Circle() or new Rectangle() directly. 
+If you add a new shape or rename a class, you have to find and update every single place. 
+With factory, all creation is in one place — you only change ShapeFactory.
+
 **Q.7 Why is getShape() static?**
+Because you should not need to create a ShapeFactory object just to get a shape. 
+Static lets you call it directly on the class — ShapeFactory.getShape("circle"). 
+The factory itself has no state to maintain, so there is no need to instantiate it.
+
 **Q.8 What is the risk of returning null for unknown types?**
+If the caller does not check for null and calls a method on it — NullPointerException crashes the program. 
+You saw this yourself when you called s4.draw(). Better approach is to throw an IllegalArgumentException so the error is clear and immediate.
 
 
