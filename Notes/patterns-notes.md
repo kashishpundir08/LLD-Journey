@@ -25,7 +25,7 @@ LLD-Journey/
 └── Notes/
 └── patterns-notes.md   
 
-*************************************************PHASE 1 **********************************************************
+***************************************************PHASE 1 OOPs***************************************************
 **Q.1 What is a class?**
 A class is the blueprint for the objects 
 It doesn't take physical memory because it is a virtual implementation.
@@ -167,7 +167,7 @@ When one class doesn't need anything from another class or both the classes have
 In this we made multiple interfaces rather than 1 sp that a class can implement only needed interface.
 
 **Q.14 What was wrong with the fat Printer interface?**
-There were 3 methods in that but after making print class that only need only print print method but we have to implement
+There were 3 methods in that but after making print class that only need print method, but we have to implement
 other methods also like scan and fax.
 
 **Q.15 How did splitting into Printable, Scannable, Faxable fix it?**
@@ -177,7 +177,6 @@ if we need only one class then have to just implement that interface. so what me
 **Q.16 Real world example from Spring Boot where ISP applies?**
 In Spring Boot you have JpaRepository, CrudRepository, PagingAndSortingRepository. 
 Each has different methods. You pick only the one that has what you need. That is ISP in action.
-
 
 ******************Dependency Injection Principle(DIP)******************
 
@@ -232,4 +231,20 @@ The factory itself has no state to maintain, so there is no need to instantiate 
 If the caller does not check for null and calls a method on it — NullPointerException crashes the program. 
 You saw this yourself when you called s4.draw(). Better approach is to throw an IllegalArgumentException so the error is clear and immediate.
 
+*************************Strategy*************************
+**What is Strategy pattern in one line?**
+Define a family of algorithms, put each in its own class, and swap them at runtime without changing the context class.
 
+**How is it different from Factory pattern?**
+Factory is about object creation — it decides which class to instantiate and returns it. 
+Strategy is about behavior — it decides which algorithm to run. Factory creates, Strategy executes.
+
+**Where did you already use Strategy pattern without knowing it?**
+In Day 8 OCP — DiscountStrategy with FlatDiscount, PercentageDiscount, SeasonalDiscount. 
+Order class just called discount.apply(price) without knowing which discount type it was. That is exactly Strategy pattern.
+
+**What is the benefit of setStrategy() vs hardcoding the algorithm?**
+If you hardcode new BubbleSort() inside SortContext, you can never change it without editing the class.
+With setStrategy() you can switch algorithms at runtime — same object, different behavior. Much more flexible.
+
+**************************Observer**************************
