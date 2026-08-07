@@ -34,7 +34,7 @@ It doesn't take physical memory because it is a virtual implementation.
 Objects are the actual implementation of a class. it takes physical memory 
 
 **Q.3 What did this mean?**
-this refers to the current object. When the constructor parameter name and the field name are the same, 
+this refers to the current object. When the constructor parameter name and the field name are the same,  
 this.owner means "the field of this object" and owner alone means "the parameter that was passed in."
 
 **Q.4 What did the constructor do?**
@@ -92,7 +92,7 @@ Circle IS a Shape. Circle CAN BE Printable.
 
 **Q.19 When would you use abstract class vs interface?**
 Abstract can have both method abstract and normal method with body and interface can have only abstract before java 8
-a class can only extend one abstract class but can implement multiple interface
+a class can only extend one abstract class but can implement multiple interface 
 
 **Q.20 What does implements mean vs extends?**
 implements is used to implement the interface and extend is used to inherit the parent class into child class 
