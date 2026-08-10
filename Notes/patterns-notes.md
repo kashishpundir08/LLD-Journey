@@ -248,3 +248,20 @@ If you hardcode new BubbleSort() inside SortContext, you can never change it wit
 With setStrategy() you can switch algorithms at runtime — same object, different behavior. Much more flexible.
 
 **************************Observer**************************
+
+**What is Observer pattern in one line?**
+When one object changes state, all objects depending on it are notified automatically.
+
+**What are the two roles — Subject and Observer?**
+Subject — the one being watched. It holds a list of observers and notifies them when something happens. In this code — YoutubeChannel.
+Observer — the one watching. It reacts when notified. In this code — User.
+
+**Where is Observer pattern used in real world Java/Spring?**
+Spring events — ApplicationEventPublisher publishes events, listeners react to them
+UI button click listeners — button is subject, listener is observer
+Message queues like Kafka — producer publishes, consumers get notified
+Database triggers — change in DB notifies other systems
+
+**What would happen if you didn't have the unsubscribe method?**
+Once subscribed, a user would receive notifications forever with no way to stop. 
+Memory leak risk too — objects stay in the subscribers list even when no longer needed, preventing garbage collection.

@@ -19,8 +19,8 @@ public class YoutubeChannel implements Subject{
 
     public void unsubscribe(Observer o){
         subscribers.remove(o);
-
     }
+
     public void notifyObservers(String videoTitle ){
         for(Observer observer : subscribers){
             observer.update(videoTitle);
