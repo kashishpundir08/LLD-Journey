@@ -259,7 +259,8 @@ Observer — the one watching. It reacts when notified. In this code — User.
 **Where is Observer pattern used in real world Java/Spring?**
 Spring events — ApplicationEventPublisher publishes events, listeners react to them
 UI button click listeners — button is subject, listener is observer
-Message queues like Kafka — producer publishes, consumers get notified
+Message queues like Kafka — producer publishes, consumers get notified-
+
 Database triggers — change in DB notifies other systems
 
 **What would happen if you didn't have the unsubscribe method?**
