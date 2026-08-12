@@ -266,3 +266,40 @@ Database triggers — change in DB notifies other systems
 **What would happen if you didn't have the unsubscribe method?**
 Once subscribed, a user would receive notifications forever with no way to stop. 
 Memory leak risk too — objects stay in the subscribers list even when no longer needed, preventing garbage collection.
+
+****************************Builder****************************
+**What is Builder pattern in one line?**
+Construct a complex object step by step using chained method calls instead of one giant constructor.
+
+**What problem does it solve compared to a constructor with many parameters?**
+With many parameters — new Pizza("large", "thin", true, "pepperoni") — you don't know what each value means. 
+Easy to pass them in wrong order. With Builder each field is named clearly — .
+size("large").crust("thin") — readable and you can skip optional fields without confusion.
+
+**Why is the Pizza constructor private?**
+To force everyone to use the Builder. If the constructor were public, someone could write new Pizza() directly and get an empty
+incomplete object. Private constructor ensures the only way to create a Pizza is through Pizza.Builder().build() 
+— which guarantees all required fields are set properly.
+
+**What does return this do in each Builder method?**
+It returns the same Builder object after setting the field. This allows method chaining — .size("large").crust("thin").cheese(true) 
+— each method call returns the Builder so you can immediately call the next method on it.
+Without return this you would have to write each setter on a separate line without chaining.
+
+****************************Decorator****************************
+**What is Decorator pattern in one line?**
+Wrap an object with another object to add new behaviour dynamically without changing the original class.
+
+**How is it different from inheritance?**
+Inheritance adds behaviour at compile time — fixed, cannot change at runtime. Decorator adds behaviour at runtime by wrapping 
+you can stack as many decorators as you want in any order. Also inheritance creates a new class for every combination 
+Decorator avoids that explosion.
+
+**What is the role of CoffeeDecorator abstract class?**
+It is the base wrapper. It holds a reference to a Coffee object and delegates getDescription() and getCost() to it.
+All concrete decorators extend it — so they don't have to repeat the wrapping logic. It is the glue between the interface and the concrete decorators.
+
+**Where does Java itself use Decorator pattern?**
+Java I/O streams — new BufferedReader(new InputStreamReader(new FileInputStream("file.txt"))). 
+Each class wraps the previous one and adds behaviour — buffering, character conversion, file reading. 
+Each layer adds one responsibility. That is Decorator in Java's standard library.
